@@ -1,19 +1,23 @@
-## Foundry
+# This stablecoin made with:
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+```shell
+1. Relative Stability: Pegged or Anchored -> 1.00$
+    1. Chainlink Price feed.
+    2. Set a function to exchange ETH & BTC -> $$$
+2. Stability Method(Minting): Algorithmic(Decentralized)
+    1. People can only mint the stablecoin with enough collateral(coded)
+3. Collateral: Exogenous(crypto)
+    1. wETH
+    2. wBTC
+```
 
 ## Usage
+
+### To create project
+
+```shell
+$ forge init
+```
 
 ### Build
 
@@ -56,6 +60,19 @@ $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --pri
 ```shell
 $ cast <subcommand>
 ```
+
+### Get coverage details
+
+```shell
+$ forge coverage --report debug
+```
+
+### To get the function signature and selector of contract
+
+```shell
+$ forge inspect <Contract-name> methods
+```
+
 
 ### Help
 
